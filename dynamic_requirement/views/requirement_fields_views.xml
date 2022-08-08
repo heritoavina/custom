@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="dynamic_req_fields_tree_view" model="ir.ui.view">
+        <field name="name">dynamic.req.fields.tree.view</field>
+        <field name="model">dynamic.requirement.field</field>
+        <field name="arch" type="xml">
+            <tree string="Requirements">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="company_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="dynamic_req_fields_form_view" model="ir.ui.view">
+        <field name="name">dynamic.req.fields.form.view</field>
+        <field name="model">dynamic.requirement.field</field>
+        <field name="arch" type="xml">
+            <form string="Requirements">
+                <sheet>
+                    <group>
+                        <div class="oe_title">
+                            <label for="name" name="name_label"/>
+                            <h1>
+                                <field name="name" placeholder="e.g. Revenue" class="oe_inline"/>
+                            </h1>
+                            <div>
+                                <field name="type"/>
+                                <field name="company_id"/>
+                                <field name="active"/>
+                            </div>
+                        </div>
+                    </group>
+                    <notebook>
+                        <page string="Condition" name="page_line_ids" >
+                            <field name="line_ids">
+                                <tree>
+                                    <field name="stage_id"/>
+                                    <field name="mandatory_fields_ids"/>
+                                    <field name="custom_warning"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="open_dynamic_req_fields_view" model="ir.actions.act_window">
+            <field name="name">Requirements</field>
+            <field name="res_model">dynamic.requirement.field</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="dynamic_req_fields_tree_view"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                No data found. Let's create one!
+              </p>
+            </field>
+        </record>
+
+    <menuitem action="open_dynamic_req_fields_view" id="menu_project_dynamic_req_fields" name="Requirements"
+              parent="project.menu_project_config" sequence="12" groups="base.group_no_one"/>
+
+</odoo>

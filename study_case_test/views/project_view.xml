@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="view_project_kanban_inherit" model="ir.ui.view">
-        <field name="name">project.project.kanban.inherit</field>
-        <field name="model">project.project</field>
-        <field name="inherit_id" ref="project.project_view_kanban"/>
-        <field name="arch" type="xml">
-            <xpath expr="//kanban" position="attributes">
-                <attribute name="default_group_by">stage_id</attribute>
-            </xpath>
-        </field>
-    </record>
+<!--    <record id="view_project_kanban_inherit" model="ir.ui.view">-->
+<!--        <field name="name">project.project.kanban.inherit</field>-->
+<!--        <field name="model">project.project</field>-->
+<!--        <field name="inherit_id" ref="project.project_view_kanban"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--&lt;!&ndash;            <xpath expr="//kanban" position="attributes">&ndash;&gt;-->
+<!--&lt;!&ndash;                <attribute name="default_group_by">stage_id</attribute>&ndash;&gt;-->
+<!--&lt;!&ndash;            </xpath>&ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
 
     <record id="project.open_view_project_all" model="ir.actions.act_window">
         <field name="view_mode">tree,kanban,form</field>

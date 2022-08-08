@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_field_requirement,dynamic_requirement.dynamic.requirement.field,model_dynamic_requirement_field,base.group_no_one,1,1,1,1
+access_field_requirement_manager,dynamic_requirement.dynamic.requirement.field.manager,model_dynamic_requirement_field,project.group_project_manager,1,1,1,1
+access_field_requirement_line,dynamic_requirement.dynamic.requirement.field.line,model_dynamic_requirement_field_line,base.group_no_one,1,1,1,1
+access_field_requirement_line_manager,dynamic_requirement.dynamic.requirement.field.line.manager,model_dynamic_requirement_field_line,project.group_project_manager,1,1,1,1

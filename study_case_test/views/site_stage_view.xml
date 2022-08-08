@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="site_stage_tree_view" model="ir.ui.view">
+        <field name="name">site.stage.tree.view</field>
+        <field name="model">site.stage</field>
+        <field name="arch" type="xml">
+            <tree string="Site stage">
+                <field name="name"/>
+                <field name="folded_kanban"/>
+                <field name="sequence"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open_site_stage_view" model="ir.actions.act_window">
+            <field name="name">Site Stages</field>
+            <field name="res_model">site.stage</field>
+            <field name="view_mode">tree,form</field>
+<!--            <field name="view_id" ref="task_type_tree"/>-->
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                No stages found. Let's create one!
+              </p>
+            </field>
+        </record>
+
+    <menuitem action="open_site_stage_view" id="menu_project_config_site_stage" name="Site Stage"
+              parent="project.menu_project_config" sequence="12" groups="base.group_no_one"/>
+
+</odoo>

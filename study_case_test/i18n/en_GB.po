@@ -58,3 +58,25 @@ msgstr "Milestones"
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 msgid "My Tasks"
 msgstr "My Milestones"
+
+#. module: project
+#: model:ir.model,name:project.model_project_project
+#: model:ir.model.fields,field_description:project.field_project_task_history_cumulative_project_id
+#: model:ir.model.fields,field_description:project.field_project_task_project_id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user_project_id
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+#: model_terms:ir.ui.view,arch_db:project.view_task_history_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+#: model:res.request.link,name:project.req_link_project
+msgid "Project"
+msgstr "Site"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.action_view_all_task
+#: model:ir.ui.menu,name:project.menu_project_management
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "My Tasks"
+msgstr "My Milestones"
